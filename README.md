@@ -2,6 +2,34 @@
 
 A searchable dropdown for wordpress customizer control
 
+# Installation
+
+```shell
+composer require mustartt/searchable-dropdown-control
+```
+
+Or specify custom install location
+
+```json
+"require": {
+    "mustartt/searchable-dropdown-control": "v1.0"
+},
+...
+"extra": {
+    "installer-paths": {
+        "inc/{$name}": [
+            "mustartt/searchable-dropdown-control"
+        ]
+    }
+}
+```
+
+and run
+
+```sh
+composer update
+```
+
 ## Screenshot
 
 What it looks like in the Wordpress Customizer
@@ -13,7 +41,7 @@ What it looks like in the Wordpress Customizer
 Include in `functions.php` if the package is installed under `inc`
 ```php
 if ( class_exists( 'WP_Customize_Control' ) ) {
-	require_once dirname( __FILE__ ) . '/inc/searchable-dropdown-control/searchable-dropdown-control.php';
+    require_once dirname( __FILE__ ) . '/inc/searchable-dropdown-control/searchable-dropdown-control.php';
 }
 ```
 
